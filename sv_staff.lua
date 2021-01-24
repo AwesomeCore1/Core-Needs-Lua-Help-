@@ -115,7 +115,7 @@ AddEventHandler('playerConnecting', function()
 			-- Set up what roles they have access to: 
 			permTracker[src] = perms;
 			print("[StaffActivity] " .. GetPlayerName(src) .. " has gotten their permissions")
-			print("[StaffActivity] " .. GetPlayerName(src) .. " has the roles " .. permTracker[src])
+			print("[StaffActivity] " .. GetPlayerName(src) .. " has the permission " .. hasPerms[src])
 		else
 			-- They don't have any perms 
 			print("[StaffActivity] " .. GetPlayerName(src) .. " has not gotten their permissions cause roleIDs == false")
