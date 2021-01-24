@@ -94,10 +94,10 @@ end
 AddEventHandler('playerConnecting', function()
   local src = source
   for _, v in ipairs(GetPlayerIdentifiers(src)) do
-    if(string.sub(v, 1, string.len("discord:")) == "discord:" then
+    if(string.sub(v, 1, string.len("discord:")) == "discord:" then)
       identifierDiscord = v
       break
-    end)
+    end
   end
   if identifierDiscord then
 		local roleIDs = exports.staffdiscord_perms:GetRoles(src)
