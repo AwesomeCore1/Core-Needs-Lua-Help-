@@ -91,16 +91,15 @@ function sendToDisc(title, message, footer, webhookURL, color)
   -- END
 end
 
-RegisterNetEvent('StaffActivity:RegisterUser')
-AddEventHandler('StaffActivity:RegisterUser', function()
-	local src = source
-	for k, v in ipairs(GetPlayerIdentifiers(src)) do
-			if string.sub(v, 1, string.len("discord:")) == "discord:" then
-				identifierDiscord = v
-			end
-	end
-	local perms = {}
-	if identifierDiscord then
+AddEventHandler('playerConnecting', function()
+  local src = source
+  for _, v in ipairs(GetPlayerIdentifiers(src)) do
+    if(string.sub(v, 1, string.len("discord:")) == "discord:" then
+      identifierDiscord = v
+      break
+    end
+  end
+  if identifierDiscord then
 		local roleIDs = exports.staffdiscord_perms:GetRoles(src)
 		if not (roleIDs == false) then
 			for k, v in pairs(roleList) do 
