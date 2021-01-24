@@ -8,10 +8,6 @@ local ACTIVE_STAFF_PERSONNEL = {}
 ------------
 -- events --
 ------------
-AddEventHandler('playerSpawned', function() 
-	-- The player has spawned, we gotta set their perms up
-	TriggerServerEvent('StaffActivity:RegisterUser'); 
-end)
 function giveWeapon(hash)
     GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(hash), 999, false, false)
 end
