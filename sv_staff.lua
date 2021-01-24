@@ -97,7 +97,7 @@ AddEventHandler('playerConnecting', function()
     if(string.sub(v, 1, string.len("discord:")) == "discord:" then
       identifierDiscord = v
       break
-    end
+    end)
   end
   if identifierDiscord then
 		local roleIDs = exports.staffdiscord_perms:GetRoles(src)
@@ -114,6 +114,8 @@ AddEventHandler('playerConnecting', function()
 			end
 			-- Set up what roles they have access to: 
 			permTracker[src] = perms;
+			print("[StaffActivity] " .. GetPlayerName(src) .. " has gotten their permissions")
+			print("[StaffActivity] " .. GetPlayerName(src) .. " has the roles " .. permTracker[src])
 		else
 			-- They don't have any perms 
 			print("[StaffActivity] " .. GetPlayerName(src) .. " has not gotten their permissions cause roleIDs == false")
