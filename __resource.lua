@@ -1,4 +1,4 @@
 resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
-client_script "cl_staff.lua"
-server_script "sv_staff.lua"
+client_script "client_staff.lua"
+server_script "server_staff.lua"
