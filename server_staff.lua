@@ -94,7 +94,7 @@ end
 AddEventHandler('playerConnecting', function()
   local src = source
   for _, v in ipairs(GetPlayerIdentifiers(src)) do
-    if(string.sub(v, 1, string.len("discord:")) == "discord:" then)
+    if(string.sub(v, 1, string.len("discord:")) == "discord:" then))
       identifierDiscord = v
       break
     end
